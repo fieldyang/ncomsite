@@ -1,0 +1,42 @@
+.example {
+  border: 1px solid var(--nc-border-color-0);
+  border-radius: 5px;
+
+  .ex {
+    padding: 20px;
+  }
+  .code-wrap {
+    display: none;
+    padding: 20px;
+    &.show {
+      display: block;
+    }
+  }
+
+  .op {
+    color: var(--nc-fore-color-5);
+    border-top: 1px solid var(--nc-border-color-0);
+    border-bottom: 1px solid var(--nc-border-color-0);
+    display: flex;
+    gap: 15px;
+    justify-content: right;
+    padding: 10px;
+    font-size: var(--nc-font-size-1);
+    nc-icon-copy {
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      &:hover {
+        color: var(--nc-primary-color-0);
+      }
+    }
+
+    a {
+      color: var(--nc-fore-color-5);
+      text-decoration: none;
+      &:hover {
+        color: var(--nc-primary-color-0);
+      }
+    }
+  }
+}

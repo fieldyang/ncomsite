@@ -1,0 +1,109 @@
+.doc {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+  color: var(--nc-fore-color-0);
+  line-height: 1.75;
+  font-size: var(--nc-font-size-2);
+}
+
+.doc h1 {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.doc h2 {
+  margin: 40px 0 16px;
+  padding-bottom: 8px;
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--nc-border-color-0);
+}
+
+.doc h3 {
+  margin: 24px 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.doc p {
+  margin: 0 0 12px;
+  color: var(--nc-fore-color-2);
+}
+
+.doc ul,
+.doc ol {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  color: var(--nc-fore-color-2);
+}
+
+.doc li {
+  margin-bottom: 6px;
+}
+
+.doc code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background: var(--nc-bg-color-2);
+  color: var(--nc-primary-light-2);
+}
+
+.doc .intro {
+  margin: 0 0 24px;
+  font-size: 15px;
+  color: var(--nc-fore-color-3);
+}
+
+.doc .toc {
+  margin: 0 0 32px;
+  padding: 16px 20px;
+  border: 1px solid var(--nc-border-color-0);
+  border-radius: 8px;
+  background: var(--nc-bg-color-1);
+}
+
+.doc .toc-title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--nc-fore-color-1);
+}
+
+.doc .toc ol {
+  margin: 0;
+}
+
+.doc .toc a {
+  color: var(--nc-primary-light-2);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--nc-primary-light-0);
+    text-decoration: underline;
+  }
+}
+
+.doc .note {
+  margin: 12px 0 20px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--nc-primary-light-0);
+  border-radius: 0 6px 6px 0;
+  background: var(--nc-primary-light-9);
+  color: var(--nc-fore-color-1);
+  font-size: 14px;
+}
+
+.doc .note strong {
+  color: var(--nc-primary-light-0);
+}
+
+.doc .warn {
+  border-left-color: var(--nc-warning-light-0);
+  background: var(--nc-warning-light-9);
+}
+
+.doc .warn strong {
+  color: var(--nc-warning-light-0);
+}

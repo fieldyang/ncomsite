@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*比例尺*/
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--nc-fore-color-0);
+  background-color: var(--nc-bg-color-0);
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+:root a {
+  color: var(--nc-primary-light-0);
+  text-decoration: none;
+}
+:root a:hover, :root a:focus {
+  color: var(--nc-primary-light-3);
+}
+:root a:active {
+  color: var(--nc-primary-dark-2);
+}
+
+:root {
+  --nc-shadow-color: rgba(105.5, 126, 147.5, 0.2);
+  --nc-mask-color: rgba(201, 230, 255, 0.2);
+  --nc-bg-color-0: #0a1628;
+  --nc-fore-color-0: #c9e6ff;
+  --nc-bg-color-1: rgb(13.82, 26.16, 44.3);
+  --nc-fore-color-1: rgb(191.45, 219.6, 244.25);
+  --nc-bg-color-2: rgb(17.64, 30.32, 48.6);
+  --nc-fore-color-2: rgb(181.9, 209.2, 233.5);
+  --nc-bg-color-3: rgb(21.46, 34.48, 52.9);
+  --nc-fore-color-3: rgb(172.35, 198.8, 222.75);
+  --nc-bg-color-4: rgb(25.28, 38.64, 57.2);
+  --nc-fore-color-4: rgb(162.8, 188.4, 212);
+  --nc-bg-color-5: rgb(29.1, 42.8, 61.5);
+  --nc-fore-color-5: rgb(153.25, 178, 201.25);
+  --nc-bg-color-6: rgb(32.92, 46.96, 65.8);
+  --nc-fore-color-6: rgb(143.7, 167.6, 190.5);
+  --nc-bg-color-7: rgb(36.74, 51.12, 70.1);
+  --nc-fore-color-7: rgb(134.15, 157.2, 179.75);
+  --nc-bg-color-8: rgb(40.56, 55.28, 74.4);
+  --nc-fore-color-8: rgb(124.6, 146.8, 169);
+  --nc-bg-color-9: rgb(44.38, 59.44, 78.7);
+  --nc-fore-color-9: rgb(115.05, 136.4, 158.25);
+  --nc-theme-fore: #ffffff;
+  --nc-primary-light-0: #00d4ff;
+  --nc-primary-dark-0: #00d4ff;
+  --nc-primary-light-1: rgb(1, 193, 233.5);
+  --nc-primary-dark-1: rgb(20.1, 213.8, 255);
+  --nc-primary-light-2: #02aed4;
+  --nc-primary-dark-2: rgb(40.2, 215.6, 255);
+  --nc-primary-light-3: rgb(3, 155, 190.5);
+  --nc-primary-dark-3: rgb(60.3, 217.4, 255);
+  --nc-primary-light-4: #0488a9;
+  --nc-primary-dark-4: rgb(80.4, 219.2, 255);
+  --nc-primary-light-5: rgb(5, 117, 147.5);
+  --nc-primary-dark-5: rgb(100.5, 221, 255);
+  --nc-primary-light-6: #06627e;
+  --nc-primary-dark-6: rgb(120.6, 222.8, 255);
+  --nc-primary-light-7: rgb(7, 79, 104.5);
+  --nc-primary-dark-7: rgb(140.7, 224.6, 255);
+  --nc-primary-light-8: #083c53;
+  --nc-primary-dark-8: rgb(160.8, 226.4, 255);
+  --nc-primary-light-9: rgb(9, 41, 61.5);
+  --nc-primary-dark-9: rgb(180.9, 228.2, 255);
+  --nc-success-light-0: #00e5a0;
+  --nc-success-dark-0: #00e5a0;
+  --nc-success-light-1: rgb(1, 208.3, 148);
+  --nc-success-dark-1: rgb(20.1, 229.1, 169.5);
+  --nc-success-light-2: rgb(2, 187.6, 136);
+  --nc-success-dark-2: rgb(40.2, 229.2, 179);
+  --nc-success-light-3: rgb(3, 166.9, 124);
+  --nc-success-dark-3: rgb(60.3, 229.3, 188.5);
+  --nc-success-light-4: rgb(4, 146.2, 112);
+  --nc-success-dark-4: rgb(80.4, 229.4, 198);
+  --nc-success-light-5: rgb(5, 125.5, 100);
+  --nc-success-dark-5: rgb(100.5, 229.5, 207.5);
+  --nc-success-light-6: rgb(6, 104.8, 88);
+  --nc-success-dark-6: rgb(120.6, 229.6, 217);
+  --nc-success-light-7: rgb(7, 84.1, 76);
+  --nc-success-dark-7: rgb(140.7, 229.7, 226.5);
+  --nc-success-light-8: rgb(8, 63.4, 64);
+  --nc-success-dark-8: rgb(160.8, 229.8, 236);
+  --nc-success-light-9: rgb(9, 42.7, 52);
+  --nc-success-dark-9: rgb(180.9, 229.9, 245.5);
+  --nc-warning-light-0: #ffbe3d;
+  --nc-warning-dark-0: #ffbe3d;
+  --nc-warning-light-1: rgb(230.5, 173.2, 58.9);
+  --nc-warning-dark-1: rgb(249.6, 194, 80.4);
+  --nc-warning-light-2: rgb(206, 156.4, 56.8);
+  --nc-warning-dark-2: rgb(244.2, 198, 99.8);
+  --nc-warning-light-3: rgb(181.5, 139.6, 54.7);
+  --nc-warning-dark-3: rgb(238.8, 202, 119.2);
+  --nc-warning-light-4: rgb(157, 122.8, 52.6);
+  --nc-warning-dark-4: rgb(233.4, 206, 138.6);
+  --nc-warning-light-5: rgb(132.5, 106, 50.5);
+  --nc-warning-dark-5: #e4d29e;
+  --nc-warning-light-6: rgb(108, 89.2, 48.4);
+  --nc-warning-dark-6: rgb(222.6, 214, 177.4);
+  --nc-warning-light-7: rgb(83.5, 72.4, 46.3);
+  --nc-warning-dark-7: rgb(217.2, 218, 196.8);
+  --nc-warning-light-8: rgb(59, 55.6, 44.2);
+  --nc-warning-dark-8: rgb(211.8, 222, 216.2);
+  --nc-warning-light-9: rgb(34.5, 38.8, 42.1);
+  --nc-warning-dark-9: rgb(206.4, 226, 235.6);
+  --nc-danger-light-0: #ff5c7a;
+  --nc-danger-dark-0: #ff5c7a;
+  --nc-danger-light-1: rgb(230.5, 85, 113.8);
+  --nc-danger-dark-1: rgb(249.6, 105.8, 135.3);
+  --nc-danger-light-2: rgb(206, 78, 105.6);
+  --nc-danger-dark-2: rgb(244.2, 119.6, 148.6);
+  --nc-danger-light-3: rgb(181.5, 71, 97.4);
+  --nc-danger-dark-3: rgb(238.8, 133.4, 161.9);
+  --nc-danger-light-4: rgb(157, 64, 89.2);
+  --nc-danger-dark-4: rgb(233.4, 147.2, 175.2);
+  --nc-danger-light-5: rgb(132.5, 57, 81);
+  --nc-danger-dark-5: rgb(228, 161, 188.5);
+  --nc-danger-light-6: rgb(108, 50, 72.8);
+  --nc-danger-dark-6: rgb(222.6, 174.8, 201.8);
+  --nc-danger-light-7: rgb(83.5, 43, 64.6);
+  --nc-danger-dark-7: rgb(217.2, 188.6, 215.1);
+  --nc-danger-light-8: rgb(59, 36, 56.4);
+  --nc-danger-dark-8: rgb(211.8, 202.4, 228.4);
+  --nc-danger-light-9: rgb(34.5, 29, 48.2);
+  --nc-danger-dark-9: rgb(206.4, 216.2, 241.7);
+  --nc-info-light-0: #6eb5ff;
+  --nc-info-dark-0: #6eb5ff;
+  --nc-info-light-1: rgb(100, 165.1, 233.5);
+  --nc-info-dark-1: rgb(119.1, 185.9, 255);
+  --nc-info-light-2: rgb(90, 149.2, 212);
+  --nc-info-dark-2: rgb(128.2, 190.8, 255);
+  --nc-info-light-3: rgb(80, 133.3, 190.5);
+  --nc-info-dark-3: rgb(137.3, 195.7, 255);
+  --nc-info-light-4: rgb(70, 117.4, 169);
+  --nc-info-dark-4: rgb(146.4, 200.6, 255);
+  --nc-info-light-5: rgb(60, 101.5, 147.5);
+  --nc-info-dark-5: rgb(155.5, 205.5, 255);
+  --nc-info-light-6: rgb(50, 85.6, 126);
+  --nc-info-dark-6: rgb(164.6, 210.4, 255);
+  --nc-info-light-7: rgb(40, 69.7, 104.5);
+  --nc-info-dark-7: rgb(173.7, 215.3, 255);
+  --nc-info-light-8: rgb(30, 53.8, 83);
+  --nc-info-dark-8: rgb(182.8, 220.2, 255);
+  --nc-info-light-9: rgb(20, 37.9, 61.5);
+  --nc-info-dark-9: rgb(191.9, 225.1, 255);
+  --nc-selected-bg-color: rgb(5, 117, 147.5);
+  --nc-selected-fore-color: rgb(100.5, 221, 255);
+  --nc-font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif;
+  --nc-font-size-0: 10px;
+  --nc-font-size-1: 12px;
+  --nc-font-size-2: 14px;
+  --nc-font-size-3: 16px;
+  --nc-font-size-4: 18px;
+  --nc-font-size-5: 20px;
+  --nc-font-size-6: 22px;
+  --nc-font-size-7: 24px;
+  --nc-font-size-8: 26px;
+  --nc-font-size-9: 28px;
+  --nc-font-weight-0: 400;
+  --nc-font-weight-1: 500;
+  --nc-font-weight-2: 600;
+  --nc-font-weight-3: 700;
+  --nc-font-weight-4: 800;
+  --nc-font-weight-5: 900;
+  --nc-placeholder-color: var(--nc--fore-color-5);
+  --nc-border-width: 1px;
+  --nc-border-radius-base: 4px;
+  --nc-border-radius-larger: 6px;
+  --nc-border-radius-largest: 8px;
+  --nc-border-radius-round: 20px;
+  --nc-border-radius-round: 50%;
+  --nc-border-color-0: rgb(19.2, 42.24, 76.8);
+  --nc-border-solid-0: 1px rgb(19.2, 42.24, 76.8) solid;
+  --nc-border-dash-0: 1px rgb(19.2, 42.24, 76.8) dashed;
+  --nc-border-color-1: rgb(19.016, 41.8352, 76.064);
+  --nc-border-solid-1: 1px rgb(19.016, 41.8352, 76.064) solid;
+  --nc-border-dash-1: 1px rgb(19.016, 41.8352, 76.064) dashed;
+  --nc-border-color-2: rgb(18.832, 41.4304, 75.328);
+  --nc-border-solid-2: 1px rgb(18.832, 41.4304, 75.328) solid;
+  --nc-border-dash-2: 1px rgb(18.832, 41.4304, 75.328) dashed;
+  --nc-border-color-3: rgb(18.648, 41.0256, 74.592);
+  --nc-border-solid-3: 1px rgb(18.648, 41.0256, 74.592) solid;
+  --nc-border-dash-3: 1px rgb(18.648, 41.0256, 74.592) dashed;
+  --nc-border-color-4: rgb(18.464, 40.6208, 73.856);
+  --nc-border-solid-4: 1px rgb(18.464, 40.6208, 73.856) solid;
+  --nc-border-dash-4: 1px rgb(18.464, 40.6208, 73.856) dashed;
+  --nc-line-light: 1px solid var(--nc-bg-color-4);
+  --nc-line-lighter: 1px solid var(--nc-bg-color-3);
+  --nc-line-lightest: 1px solid var(--nc-bg-color-2);
+  --nc-padding: 10px;
+  --nc-transition-duration-0: 0.2s;
+  --nc-transition-duration-1: 0.3s;
+  --nc-transition-duration-2: 0.4s;
+  --nc-transition-duration-3: 0.5s;
+  --nc-transition-duration-4: 0.6s;
+  --nc-transition-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --nc-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
+  --nc-scrollbar-width: 3px;
+  --nc-popup-zindex: 1000;
+  --nc-modal-zindex: 1000;
+  --nc-drawer-zindex: 1000;
+  --nc-notification-zindex: 1000;
+  --nc-message-zindex: 1001;
+  --nc-pop-zindex: 1002;
+}
+:root * {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+/* 整个滚动条 */
+::-webkit-scrollbar {
+  width: var(--nc-scrollbar-width);
+  height: var(--nc-scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nc-bg-color-1);
+  border-radius: var(--nc-scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nc-bg-color-9);
+  border-radius: var(--nc-scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nc-fore-color-9);
+}
+
+/*# sourceMappingURL=ncom-deepblue.css.map */
