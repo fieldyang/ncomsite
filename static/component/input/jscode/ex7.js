@@ -1,15 +1,7 @@
 import { NComponent, defineComponent } from "@ncom/all";
-interface NCInputElement extends HTMLElement {
-  value;
-  clear: () => void;
-  focus: () => void;
-  blur: () => void;
-  getValue: () => string;
-  setValue: (value) => void;
-}
 
 export default class Input7 extends NComponent {
-  inputEl: NCInputElement | null | undefined;
+  inputEl;
   template() {
     return `
       <div>

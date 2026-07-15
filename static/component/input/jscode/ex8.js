@@ -1,7 +1,7 @@
 import { NComponent, defineComponent, NCInput, ChangeEventDetail } from "@ncom/all";
 
 export default class Input8 extends NComponent {
-  inputEl: NCInput | undefined;
+  inputEl;
   template() {
     return `
       <div>
@@ -38,7 +38,7 @@ export default class Input8 extends NComponent {
   handleKeydown(e) {
     console.log("key down:", e.detail);
   }
-  changeNumber(e: ChangeEventDetail) {
+  changeNumber(e) {
     console.log("change number:", e.detail);
   }
 }
