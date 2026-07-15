@@ -1,6 +1,7 @@
 import { defineComponent, NComponent } from "@ncom/all";
 import hljs from "highlight.js";
 import "highlight.js/lib/languages/typescript";
+import { withBase } from "../../index/base.ts";
 
 export default class ExFileCode extends NComponent {
   private _type: string = "ts";
@@ -23,9 +24,9 @@ export default class ExFileCode extends NComponent {
     }
     let url;
     if (this._type === "ts") {
-      url = `/static/${arr[0]}/${arr[1]}/components/${arr[2]}.ts`;
+      url = withBase(`/static/${arr[0]}/${arr[1]}/components/${arr[2]}.ts`);
     } else {
-      url = `/static/${arr[0]}/${arr[1]}/jscode/${arr[2]}.js`;
+      url = withBase(`/static/${arr[0]}/${arr[1]}/jscode/${arr[2]}.js`);
     }
 
     fetch(url, {

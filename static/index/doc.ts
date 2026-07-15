@@ -1,6 +1,7 @@
 import { NComponent, defineComponent, navigate } from "@ncom/all";
 import css from "../css/doc.scss?inline";
 import router from "./router";
+import { withBase } from "./base.ts";
 
 export default class App extends NComponent {
   themeItems = [
@@ -56,7 +57,7 @@ export default class App extends NComponent {
   }
   changeTheme(e: CustomEvent<{ key: string }>) {
     const link = document.querySelector("#theme-link") as HTMLLinkElement;
-    link.href = `/css/ncom-${e.detail.key}.css`;
+    link.href = withBase(`/css/ncom-${e.detail.key}.css`);
   }
 
   template() {
